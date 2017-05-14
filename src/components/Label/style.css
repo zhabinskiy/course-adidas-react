@@ -1,0 +1,12 @@
+.label {
+  display: inline-block;
+  color: #fff;
+  font-weight: 700;
+  font-family: "Avenir Next", Arial, sans-serif;
+  text-transform: uppercase;
+  width: 76px;
+  font-size: 14px;
+  padding: 6px 0;
+  text-align: center;
+  background: #ff5c5c;
+}

@@ -1,0 +1,36 @@
+.filters-gender {
+  margin-left: 29px;
+}
+
+.gender-button {
+  background: none;
+  border: none;
+  color: #d6d6d6;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Avenir Next", Arial, sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  transition: .2s;
+  margin-right: 12px;
+}
+
+.gender-button:last-child {
+  margin-right: 0;
+}
+
+.gender-button:hover {
+  color: #4d42f8;
+}
+
+.gender-button-active {
+  color: #4d42f8;
+}
+
+@media screen and (max-width: 1080px) {
+
+  .filters-gender {
+    margin-left: 0;
+  }
+}

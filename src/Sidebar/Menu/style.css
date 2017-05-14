@@ -1,0 +1,46 @@
+.menu {
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.menu-link {
+  display: block;
+  color: #3c3c3c;
+  text-decoration: none;
+  margin-top: 30px;
+  transition: .2s;
+}
+
+.menu-link:hover {
+  color: #fff;
+}
+
+.menu-link-arrdown-icon {
+  position: relative;
+  bottom: 3px;
+  margin-left: 3px;
+}
+
+.menu-submenu {
+  font-family: "Andale Mono", Courier New, sans-serif;
+  font-weight: normal;
+  margin-bottom: 55px;
+}
+
+.submenu-link {
+  display: block;
+  color: #3c3c3c;
+  text-decoration: none;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  transition: .2s;
+}
+
+.submenu-link:hover {
+  color: #fff;
+}
+
+.submenu-link-active {
+  color: #fff;
+}

@@ -1,0 +1,46 @@
+.filters-size {
+  margin-left: 50px;
+}
+
+.size-title {
+  color: #4d42f8;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Avenir Next", Arial, sans-serif;
+  text-transform: uppercase;
+  margin-right: 12px;
+}
+
+.size-button {
+  background: none;
+  border: none;
+  color: #d6d6d6;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Avenir Next", Arial, sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  transition: .2s;
+  margin-right: 6px;
+}
+
+.size-button:last-child {
+  margin-right: 0;
+}
+
+.size-button:hover {
+  color: #4d42f8;
+}
+
+.size-button-active {
+  color: #4d42f8;
+}
+
+@media screen and (max-width: 1080px) {
+
+  .filters-size {
+    margin-left: 0;
+  }
+
+}
