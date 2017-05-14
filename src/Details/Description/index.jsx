@@ -6,7 +6,9 @@ export default () => (
     <p>
       <span className="description-accent">Adidas</span>
       {' '}
-      is a German multinational corporation, headquartered in Herzogenaurach, Germany, that designs and manufactures shoes, clothing and accessories.
+      is a German multinational corporation, headquartered
+      in Herzogenaurach, Germany, that designs and
+      manufactures shoes, clothing and accessories.
     </p>
   </div>
 );

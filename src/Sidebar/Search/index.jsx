@@ -3,11 +3,9 @@ import SearchIcon from './SearchIcon';
 import SearchInput from './SearchInput';
 import './style.css';
 
-export default () => {
-  return (
-    <form className="search">
-      <SearchIcon />
-      <SearchInput />
-    </form>
+export default () => (
+  <form className="search">
+    <SearchIcon />
+    <SearchInput />
+  </form>
   );
-};

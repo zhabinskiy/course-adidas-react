@@ -4,12 +4,10 @@ import Search from './Search';
 import Menu from './Menu';
 import './style.css';
 
-export default () => {
-  return (
-    <aside className="sidebar">
-      <Logo />
-      <Search />
-      <Menu />
-    </aside>
+export default () => (
+  <aside className="sidebar">
+    <Logo />
+    <Search />
+    <Menu />
+  </aside>
   );
-};

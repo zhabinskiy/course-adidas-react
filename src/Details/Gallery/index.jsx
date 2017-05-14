@@ -5,22 +5,19 @@ export default () => (
   <div className="details-gallery">
 
     <div className="gallery-main-photo">
-      <img
-        className="gallery-main-photo-item"
-        src={require('./big-shoes@2x.jpg')}
-      />
+      <img className="gallery-main-photo-item" src={require('./big-shoes@2x.jpg')} alt="" />
     </div>
 
     <div className="gallery-photo">
 
       <div className="gallery-photo-items">
-        <img src={require('./small-shoes-1@2x.jpg')} width="145" height="118" />
+        <img src={require('./small-shoes-1@2x.jpg')} width="145" height="118" alt="" />
 
-        <img src={require('./small-shoes-2@2x.jpg')} width="145" height="118" />
+        <img src={require('./small-shoes-2@2x.jpg')} width="145" height="118" alt="" />
 
-        <img src={require('./small-shoes-3@2x.jpg')} width="145" height="118" />
+        <img src={require('./small-shoes-3@2x.jpg')} width="145" height="118" alt="" />
 
-        <img src={require('./small-shoes-4@2x.jpg')} width="145" height="118" />
+        <img src={require('./small-shoes-4@2x.jpg')} width="145" height="118" alt="" />
       </div>
 
       <div className="gallery-photo-lines">

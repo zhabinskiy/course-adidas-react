@@ -1,22 +1,17 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import './arr-down.svg';
+import { Link } from 'react-router-dom';
 import './style.css';
 
-const MenuLink = props => (
-  <Link to={props.to} className="menu-link">{props.children}</Link>
-);
+const MenuLink = props => <Link to={props.to} className="menu-link">{props.children}</Link>;
 
-const SubmenuLink = props => (
-  <Link to={props.to} className="submenu-link">{props.children}</Link>
-);
+const SubmenuLink = props => <Link to={props.to} className="submenu-link">{props.children}</Link>;
 
 export default () => (
   <nav className="menu">
     <MenuLink to="/">
       Sports
       {' '}
-      <img className="menu-link-arrdown-icon" src={require('./arr-down.svg')} />
+      <img className="menu-link-arrdown-icon" src={require('./arr-down.svg')} alt="" />
     </MenuLink>
     <nav className="menu-submenu">
       <SubmenuLink to="/item">Shoes</SubmenuLink>
