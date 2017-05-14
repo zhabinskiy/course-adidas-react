@@ -1,0 +1,13 @@
+.details-description {
+  position: relative;
+  bottom: 160px;
+  z-index: 1;
+  font-weight: 500;
+  font-size: 33px;
+  line-height: 50px;
+  color: #d8d8d8;
+}
+
+.description-accent {
+  color: #6e6e6e;
+}

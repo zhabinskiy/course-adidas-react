@@ -1,5 +1,35 @@
-body {
-  margin: 0;
+@font-face {
+	font-family: "Andale Mono";
+	src: local("AndaleMono"), url(./fonts/AndaleMono.eot);
+	src: local("AndaleMono"), url(./fonts/AndaleMono.eot?#iefix) format("embedded-opentype"),
+	url(./fonts/AndaleMono.woff) format("woff"),
+	url(./fonts/AndaleMono.ttf) format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: local("AvenirNext"), url(./fonts/AvenirNext-Bold.eot);
+  src: local("AvenirNext"), url(./fonts/AvenirNext-Bold.eot?#iefix) format("embedded-opentype"),
+  url(./fonts/AvenirNext-Bold.woff) format("woff"),
+	url(./fonts/AvenirNext-Bold.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+* {
+  box-sizing: border-box;
   padding: 0;
-  font-family: sans-serif;
+  margin: 0;
+  text-size-adjust: none;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: "Avenir Next", Arial, sans-serif;
+  font-size: 24px;
 }

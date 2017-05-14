@@ -1,0 +1,72 @@
+.details-info {
+  top: 30px;
+  right: 32px;
+  position: absolute;
+  text-align: right;
+  z-index: 1;
+}
+
+.details-info-colors {
+  display: inline-block;
+  position: relative;
+  top: 4px;
+  margin-right: 20px;
+}
+
+.btn-color {
+  width: 18px;
+  height: 18px;
+  border: none;
+  border-radius: 100%;
+  margin: 0 3px;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.btn-color:hover {
+  position: relative;
+  transform: scale(1.2);
+}
+
+.btn-color-gray {
+  background: #c5c5c5;
+}
+
+.btn-color-blue {
+  background: #4d87ca;
+}
+
+.btn-color-black {
+  background: #4a4a4a;
+}
+
+.btn-color-silver {
+  background: #e0e0e0;
+}
+
+.details-info-price {
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.details-info-price-heading {
+  font-size: 80px;
+  color: #e2e2e2;
+}
+
+@media screen and (max-width: 760px) {
+
+  .details-info {
+    position: static;
+    display: flex;
+    height: 32px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .details-info-colors {
+    margin-right: 0;
+  }
+
+}
