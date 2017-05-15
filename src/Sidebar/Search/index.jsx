@@ -1,11 +1,20 @@
 import React from 'react';
-import SearchIcon from './SearchIcon';
-import SearchInput from './SearchInput';
-import './style.css';
+import styled from 'styled-components';
+import Icon from './Icon';
+import Input from './Input';
+
+const Search = styled.form`
+  margin-top: 40px;
+  margin-bottom: 123px;
+
+  @media screen and (max-width: 760px) {
+    display: none;
+  }
+`;
 
 export default () => (
-  <form className="search">
-    <SearchIcon />
-    <SearchInput />
-  </form>
-  );
+  <Search>
+    <Icon />
+    <Input />
+  </Search>
+);
