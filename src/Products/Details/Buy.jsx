@@ -1,4 +1,7 @@
-.buy-button {
+import React from 'react';
+import styled from 'styled-components';
+
+const Button = styled.button`
   display: block;
   position: fixed;
   z-index: 1;
@@ -16,16 +19,14 @@
   text-transform: uppercase;
   outline: none;
   cursor: pointer;
-}
 
-.buy-button:hover {
-  background-image: linear-gradient(to left, #4949aa, #27275d);
-}
-
-@media screen and (max-width: 760px) {
-
-  .buy-button {
-    padding: 37px 0 34px 0;
+  &:hover {
+    background-image: linear-gradient(to left, #4949aa, #27275d);
   }
 
-}
+  @media screen and (max-width: 760px) {
+    padding: 37px 0 34px 0;
+  }
+`;
+
+export default () => <Button>Buy Now</Button>;
