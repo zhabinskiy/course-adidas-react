@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Description = styled.div`
+const Description = styled.p`
   position: relative;
   bottom: 160px;
   z-index: 1;
@@ -17,12 +17,10 @@ const Accent = styled.span`
 
 export default () => (
   <Description>
-    <p>
-      <Accent>Adidas</Accent>
-      {' '}
-      is a German multinational corporation, headquartered
-      in Herzogenaurach, Germany, that designs and
-      manufactures shoes, clothing and accessories.
-    </p>
+    <Accent>Adidas</Accent>
+    {' '}
+    is a German multinational corporation, headquartered
+    in Herzogenaurach, Germany, that designs and
+    manufactures shoes, clothing and accessories.
   </Description>
 );
