@@ -18,6 +18,7 @@ const Button = styled.button`
   color: #fff;
   font-family: "Avenir Next", Arial, sans-serif;
   font-size: 24px;
+  font-weight: 700;
   text-transform: uppercase;
   background: none;
   border: none;
