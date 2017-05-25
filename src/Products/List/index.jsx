@@ -18,6 +18,11 @@ const Content = styled.div`
 const Products = styled(Grid)`
   padding-left: 22px;
   padding-right: 22px;
+
+  @media screen and (max-width: 760px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 `;
 
 export default () => (
