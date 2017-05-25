@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import Logo from './Logo';
+import Navbar from './Navbar';
 import Search from './Search';
 import Menu from './Menu';
 
@@ -24,6 +24,7 @@ const Sidebar = styled.aside`
     min-height: 64px;
     padding-top: 12px;
     padding-left: 16px;
+    padding-right: 16px;
     justify-content: center;
     align-items: flex-start;
   }
@@ -34,6 +35,7 @@ const Link = styled(NavLink)`
   font-family: "Andale Mono", Courier New, sans-serif;
   font-weight: normal;
   color: #3c3c3c;
+  text-transform: uppercase;
   text-decoration: none;
   margin-top: 25px;
   transition: .2s;
@@ -45,7 +47,7 @@ const Link = styled(NavLink)`
 
 export default () => (
   <Sidebar>
-    <Logo />
+    <Navbar />
     <Search />
     <Menu title="Football">
       <Link to=".">Shoes</Link>

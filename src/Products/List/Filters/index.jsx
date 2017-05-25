@@ -10,7 +10,7 @@ const Filters = styled.div`
   margin-bottom: 12px;
   padding-bottom: 11px;
   padding-left: 23px;
-  border-bottom: 3px solid rgba(#e7e7e7, 0.56);
+  border-bottom: 3px solid rgba(231, 231, 231, 0.56);
 
   @media screen and (max-width: 1080px) {
     align-items: flex-start;
