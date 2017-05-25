@@ -1,5 +1,4 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const Menu = styled.nav`
@@ -12,44 +11,60 @@ const Menu = styled.nav`
   }
 `;
 
-const Submenu = styled.nav`
-  font-family: "Andale Mono", Courier New, sans-serif;
-  font-weight: normal;
-  margin-bottom: 55px;
-`;
-
-const MenuLink = styled(NavLink)`
-  display: block;
-  color: #3c3c3c;
-  text-decoration: none;
-  margin-top: 30px;
-  margin-bottom: ${props => (props.isSubmenu ? '25px' : '0')};
+const Button = styled.button`
+  display: inline-block;
+  position: relative;
+  left: 8px;
+  color: #fff;
+  font-family: "Avenir Next", Arial, sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  outline: none;
+  margin-top: 40px;
+  cursor: pointer;
   transition: .2s;
 
   &:hover {
-    color: #fff;
+    opacity: .7;
+  }
+
+  &::after {
+    display: inline-block;
+    position: relative;
+    content: '';
+    width: 14px;
+    height: 9px;
+    bottom: 3px;
+    margin-left: 10px;
+    background: url(${require('./arr-down.svg')}) no-repeat 50% 50%;
   }
 `;
 
-const ArrowDown = styled.img`
-  position: relative;
-  bottom: 3px;
-  margin-left: 3px;
-`;
+class Navigation extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpened: false,
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
 
-export default () => (
-  <Menu>
-    <MenuLink activeStyle={{ color: '#fff' }} to="/">
-      Sports
-      {' '}
-      <ArrowDown src={require('./arr-down.svg')} alt="" />
-    </MenuLink>
-    <Submenu>
-      <MenuLink isSubmenu activeStyle={{ color: '#fff' }} to="/">Shoes</MenuLink>
-      <MenuLink isSubmenu activeStyle={{ color: '#fff' }} to=".">Clothing</MenuLink>
-      <MenuLink isSubmenu activeStyle={{ color: '#fff' }} to=".">Accesories</MenuLink>
-    </Submenu>
-    <MenuLink activeStyle={{ color: '#fff' }} to=".">Brands</MenuLink>
-    <MenuLink activeStyle={{ color: '#fff' }} to=".">Micoach</MenuLink>
-  </Menu>
-);
+  handleClick() {
+    this.setState(prevState => ({
+      isOpened: !prevState.isOpened,
+    }));
+  }
+
+  render() {
+    return (
+      <Menu>
+        <Button onClick={this.handleClick}>{this.props.title}</Button>
+        {this.state.isOpened && this.props.children}
+      </Menu>
+    );
+  }
+}
+
+export default Navigation;
