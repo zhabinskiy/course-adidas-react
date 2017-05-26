@@ -48,19 +48,19 @@ export default () => (
     <Logo />
     <Search />
     <Menu title="Football">
-      <Link to=".">Shoes</Link>
-      <Link to=".">Clothing</Link>
-      <Link to=".">Accesories</Link>
+      <Link to="/products/football/shoes" activeStyle={{ color: '#fff' }}>Shoes</Link>
+      <Link to="/products/football/clothing" activeStyle={{ color: '#fff' }}>Clothing</Link>
+      <Link to="/products/football/accesories" activeStyle={{ color: '#fff' }}>Accesories</Link>
     </Menu>
     <Menu title="Running">
-      <Link to=".">Shoes</Link>
-      <Link to=".">Clothing</Link>
-      <Link to=".">Accesories</Link>
+      <Link to="/products/running/shoes" activeStyle={{ color: '#fff' }}>Shoes</Link>
+      <Link to="/products/running/clothing" activeStyle={{ color: '#fff' }}>Clothing</Link>
+      <Link to="/products/running/accesories" activeStyle={{ color: '#fff' }}>Accesories</Link>
     </Menu>
     <Menu title="Basketball">
-      <Link to=".">Shoes</Link>
-      <Link to=".">Clothing</Link>
-      <Link to=".">Accesories</Link>
+      <Link to="/products/basketball/shoes" activeStyle={{ color: '#fff' }}>Shoes</Link>
+      <Link to="/products/basketball/clothing" activeStyle={{ color: '#fff' }}>Clothing</Link>
+      <Link to="/products/basketball/accesories" activeStyle={{ color: '#fff' }}>Accesories</Link>
     </Menu>
   </Sidebar>
 );

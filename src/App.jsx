@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import List from './Products/List';
 import Details from './Products/Details';
@@ -9,9 +9,9 @@ function App() {
     <Router>
       <div className="App">
         <Sidebar />
-
-        <Route exact path="/" component={List} />
-        <Route path="/item" component={Details} />
+        <Redirect to="/products/football/shoes" from="/" />
+        <Route exact path="/products/:category/:filter" component={List} />
+        <Route path="/products/:category/:filter/:id" component={Details} />
       </div>
     </Router>
   );

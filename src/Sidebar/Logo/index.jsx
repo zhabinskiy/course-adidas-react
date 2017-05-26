@@ -18,7 +18,7 @@ const Logo = styled.img`
 `;
 
 export default () => (
-  <NavLink to="/">
+  <NavLink to="/products/football/shoes">
     <Logo src={require('./logo@2x.png')} alt="" />
   </NavLink>
 );
