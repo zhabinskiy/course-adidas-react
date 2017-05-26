@@ -29,7 +29,7 @@ const Sidebar = styled.aside`
   }
 `;
 
-const Link = styled(NavLink)`
+const NavigationLink = styled(NavLink)`
   display: block;
   font-family: "Andale Mono", Courier New, sans-serif;
   font-weight: normal;
@@ -42,6 +42,10 @@ const Link = styled(NavLink)`
     color: #fff;
   }
 `;
+
+const Link = ({ to, children }) => (
+  <NavigationLink activeStyle={{ color: '#fff' }} to={to}>{children}</NavigationLink>
+);
 
 export default () => (
   <Sidebar>

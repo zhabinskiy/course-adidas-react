@@ -9,7 +9,8 @@ function App() {
     <Router>
       <div className="App">
         <Sidebar />
-        <Redirect to="/products/football/shoes" from="/" />
+
+        <Redirect from="/" to="/products/football/shoes" />
         <Route exact path="/products/:category/:filter" component={List} />
         <Route path="/products/:category/:filter/:id" component={Details} />
       </div>
