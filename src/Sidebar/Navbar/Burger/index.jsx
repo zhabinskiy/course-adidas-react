@@ -66,7 +66,6 @@ class Navigation extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isBurgerOpened: false,
       isOpened: false,
     };
     this.handleClick = this.handleClick.bind(this);
@@ -74,7 +73,6 @@ class Navigation extends Component {
 
   handleClick() {
     this.setState(prevState => ({
-      isBurgerOpened: !prevState.isBurgerOpened,
       isOpened: !prevState.isOpened,
     }));
   }
@@ -83,7 +81,7 @@ class Navigation extends Component {
     return (
       <Wrapper>
         <Burger onClick={this.handleClick} />
-        {this.state.isBurgerOpened &&
+        {this.state.isOpened &&
           <Menu>
             <Category>
               <Title>Football</Title>
