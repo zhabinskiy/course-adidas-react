@@ -11,8 +11,8 @@ function App() {
         <Sidebar />
 
         <Redirect from="/" to="/products/football/shoes" />
-        <Route exact path="/products/:category/:filter" component={List} />
-        <Route path="/products/:category/:filter/:id" component={Details} />
+        <Route exact path="/products/:group/:type" component={List} />
+        <Route path="/products/:group/:type/:id" component={Details} />
       </div>
     </Router>
   );
