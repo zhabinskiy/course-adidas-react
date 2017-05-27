@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import Title from './Title';
 import Info from './Info';
+import Colors from './Colors';
 import Gallery from './Gallery';
 import Description from './Description';
 import Buy from './Buy';
+
+const colors = ['#c5c5c5', '#4d87ca', '#4a4a4a', '#e0e0e0'];
 
 const Content = styled.div`
   margin-left: 414px;
@@ -18,16 +21,36 @@ const Content = styled.div`
   }
 `;
 
-const Details = styled.div``;
+const Wrapper = styled.div``;
 
-export default () => (
-  <Content>
-    <Details>
-      <Title />
-      <Info />
-      <Gallery />
-      <Description />
-    </Details>
-    <Buy />
-  </Content>
-);
+class Details extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedColorIndex: 0,
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(selectedColorIndex) {
+    this.setState({ selectedColorIndex });
+  }
+
+  render() {
+    return (
+      <Content>
+        <Wrapper>
+          <Title saveButtonColor={colors[this.state.selectedColorIndex]} />
+          <Info priceColor={colors[this.state.selectedColorIndex]}>
+            <Colors colors={colors} onChange={this.handleClick} />
+          </Info>
+          <Gallery />
+          <Description />
+        </Wrapper>
+        <Buy />
+      </Content>
+    );
+  }
+}
+
+export default Details;
