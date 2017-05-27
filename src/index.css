@@ -33,3 +33,21 @@ body {
   font-family: "Avenir Next", Arial, sans-serif;
   font-size: 24px;
 }
+
+.burgerOpened-enter {
+  transform: translateX(-100vw);
+}
+
+.burgerOpened-enter.burgerOpened-enter-active {
+	transform: translateX(0vw);
+  transition: all 400ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.burgerOpened-leave {
+  transform: translateX(0vw);
+}
+
+.burgerOpened-leave.burgerOpened-leave-active {
+	transform: translateX(-100vw);
+	transition: all 400ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
