@@ -46,7 +46,7 @@ class Navigation extends Component {
     return (
       <Wrapper>
         <Burger onClick={this.props.onClick} />
-        <ReactCSSTransitionGroup transitionName="example">
+        <ReactCSSTransitionGroup transitionName="burgerOpened">
           {this.props.isOpened &&
             <Nav>
               <Menu isOpened={this.props.isOpened} />

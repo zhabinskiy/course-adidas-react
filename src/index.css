@@ -34,20 +34,20 @@ body {
   font-size: 24px;
 }
 
-.example-enter {
+.burgerOpened-enter {
   transform: translateX(-100vw);
 }
 
-.example-enter.example-enter-active {
+.burgerOpened-enter.burgerOpened-enter-active {
 	transform: translateX(0vw);
   transition: all 400ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
-.example-leave {
+.burgerOpened-leave {
   transform: translateX(0vw);
 }
 
-.example-leave.example-leave-active {
+.burgerOpened-leave.burgerOpened-leave-active {
 	transform: translateX(-100vw);
 	transition: all 400ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
