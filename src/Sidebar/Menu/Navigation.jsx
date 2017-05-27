@@ -55,14 +55,14 @@ class Navigation extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isOpened: false,
+      isOpen: false,
     };
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
     this.setState(prevState => ({
-      isOpened: !prevState.isOpened,
+      isOpen: !prevState.isOpen,
     }));
   }
 
@@ -70,7 +70,7 @@ class Navigation extends Component {
     return (
       <Menu>
         <Button onClick={this.handleClick}>{this.props.title}</Button>
-        {this.state.isOpened && this.props.children}
+        {this.state.isOpen && this.props.children}
       </Menu>
     );
   }
