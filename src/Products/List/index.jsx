@@ -32,32 +32,60 @@ export default () => (
       <Row>
 
         <Col xs={12} sm={6} md={4} lg={4}>
-          <Card label="Sale" isSale image={require('./shoes-1@2x.jpg')} item="/item" price="$170" />
+          <Card
+            label="Sale"
+            isSale
+            image={require('./shoes-1@2x.jpg')}
+            item="/products/football/shoes/1"
+            price="$170"
+          />
         </Col>
 
         <Col xs={12} sm={6} md={4} lg={4}>
           <Card
             image={require('./shoes-3@2x.jpg')}
             priceType="normal"
-            item="/item"
+            item="/products/football/shoes/2"
             price="$240.99"
           />
         </Col>
 
         <Col xs={12} sm={6} md={4} lg={4}>
-          <Card image={require('./shoes-1@2x.jpg')} priceType="normal" item="/item" price="$1024" />
+          <Card
+            image={require('./shoes-1@2x.jpg')}
+            priceType="normal"
+            item="/products/football/shoes/3"
+            price="$1024"
+          />
         </Col>
 
         <Col xs={12} sm={6} md={4} lg={4}>
-          <Card image={require('./shoes-1@2x.jpg')} priceType="normal" item="/item" price="$170" />
+          <Card
+            image={require('./shoes-1@2x.jpg')}
+            priceType="normal"
+            item="/products/football/shoes/4"
+            price="$170"
+          />
         </Col>
 
         <Col xs={12} sm={6} md={4} lg={4}>
-          <Card label="Sale" isSale image={require('./shoes-2@2x.jpg')} item="/item" price="$170" />
+          <Card
+            label="Sale"
+            isSale
+            image={require('./shoes-2@2x.jpg')}
+            item="/products/football/shoes/5"
+            price="$170"
+          />
         </Col>
 
         <Col xs={12} sm={6} md={4} lg={4}>
-          <Card label="Sale" isSale image={require('./shoes-3@2x.jpg')} item="/item" price="$170" />
+          <Card
+            label="Sale"
+            isSale
+            image={require('./shoes-3@2x.jpg')}
+            item="/products/football/shoes/6"
+            price="$170"
+          />
         </Col>
 
       </Row>
