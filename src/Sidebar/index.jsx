@@ -29,7 +29,7 @@ const Sidebar = styled.aside`
   }
 `;
 
-const Link = styled(NavLink)`
+const NavigationLink = styled(NavLink)`
   display: block;
   font-family: "Andale Mono", Courier New, sans-serif;
   font-weight: normal;
@@ -43,24 +43,28 @@ const Link = styled(NavLink)`
   }
 `;
 
+const Link = ({ to, children }) => (
+  <NavigationLink activeStyle={{ color: '#fff' }} to={to}>{children}</NavigationLink>
+);
+
 export default () => (
   <Sidebar>
     <Logo />
     <Search />
     <Menu title="Football">
-      <Link to=".">Shoes</Link>
-      <Link to=".">Clothing</Link>
-      <Link to=".">Accesories</Link>
+      <Link to="/products/football/shoes">Shoes</Link>
+      <Link to="/products/football/clothing">Clothing</Link>
+      <Link to="/products/football/accesories">Accesories</Link>
     </Menu>
     <Menu title="Running">
-      <Link to=".">Shoes</Link>
-      <Link to=".">Clothing</Link>
-      <Link to=".">Accesories</Link>
+      <Link to="/products/running/shoes">Shoes</Link>
+      <Link to="/products/running/clothing">Clothing</Link>
+      <Link to="/products/running/accesories">Accesories</Link>
     </Menu>
     <Menu title="Basketball">
-      <Link to=".">Shoes</Link>
-      <Link to=".">Clothing</Link>
-      <Link to=".">Accesories</Link>
+      <Link to="/products/basketball/shoes">Shoes</Link>
+      <Link to="/products/basketball/clothing">Clothing</Link>
+      <Link to="/products/basketball/accesories">Accesories</Link>
     </Menu>
   </Sidebar>
 );
