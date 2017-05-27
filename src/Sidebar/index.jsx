@@ -16,7 +16,7 @@ const Sidebar = styled.aside`
   justify-content: flex-start;
   flex-direction: column;
   align-items: center;
-  z-index: 2;
+  z-index: 3;
 
   @media screen and (max-width: 760px) {
     width: 100%;

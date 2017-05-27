@@ -21,6 +21,7 @@ const Title = styled.h1`
 
   @media screen and (max-width: 760px) {
     font-size: 36px;
+    margin-bottom: 0;
   }
 `;
 

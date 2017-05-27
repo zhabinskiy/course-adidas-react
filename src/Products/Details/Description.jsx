@@ -9,6 +9,11 @@ const Description = styled.p`
   font-size: 33px;
   line-height: 50px;
   color: #d8d8d8;
+
+  @media screen and (max-width: 760px) {
+    font-size: 20px;
+    line-height: 28px;
+  }
 `;
 
 const Accent = styled.span`
