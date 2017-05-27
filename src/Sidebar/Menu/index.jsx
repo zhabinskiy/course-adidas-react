@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const Link = styled(NavLink)`
+const NavigationLink = styled(NavLink)`
   display: block;
   font-family: "Andale Mono", Courier New, sans-serif;
   font-weight: normal;
@@ -30,6 +30,10 @@ const Link = styled(NavLink)`
     border-bottom: 1px solid rgba(255, 255, 255, .05);
   }
 `;
+
+const Link = ({ to, children }) => (
+  <NavigationLink activeStyle={{ color: '#fff' }} to={to}>{children}</NavigationLink>
+);
 
 export default props => (
   <Wrapper isOpened={props.isOpened}>
