@@ -1,7 +1,7 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { Component } from 'react';
 import styled from 'styled-components';
-import Navbar from './Navbar';
+import Logo from './Logo';
+import Burger from './Burger';
 import Search from './Search';
 import Menu from './Menu';
 
@@ -30,39 +30,41 @@ const Sidebar = styled.aside`
   }
 `;
 
-const Link = styled(NavLink)`
-  display: block;
-  font-family: "Andale Mono", Courier New, sans-serif;
-  font-weight: normal;
-  color: #3c3c3c;
-  text-transform: uppercase;
-  text-decoration: none;
-  margin-top: 25px;
-  transition: .2s;
-
-  &:hover {
-    color: #fff;
+const Wrapper = styled.div`
+  @media screen and (max-width: 760px) {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
   }
 `;
 
-export default () => (
-  <Sidebar>
-    <Navbar />
-    <Search />
-    <Menu title="Football">
-      <Link to=".">Shoes</Link>
-      <Link to=".">Clothing</Link>
-      <Link to=".">Accesories</Link>
-    </Menu>
-    <Menu title="Running">
-      <Link to=".">Shoes</Link>
-      <Link to=".">Clothing</Link>
-      <Link to=".">Accesories</Link>
-    </Menu>
-    <Menu title="Basketball">
-      <Link to=".">Shoes</Link>
-      <Link to=".">Clothing</Link>
-      <Link to=".">Accesories</Link>
-    </Menu>
-  </Sidebar>
-);
+class Aside extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpened: false,
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState(prevState => ({
+      isOpened: !prevState.isOpened,
+    }));
+  }
+
+  render() {
+    return (
+      <Sidebar>
+        <Wrapper>
+          <Logo />
+          <Burger onClick={this.handleClick} isOpened={this.state.isOpened} />
+        </Wrapper>
+        <Search />
+        <Menu />
+      </Sidebar>
+    );
+  }
+}
+
+export default Aside;

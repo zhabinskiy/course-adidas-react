@@ -1,71 +1,52 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import Navigation from './Navigation';
 
-const Menu = styled.nav`
-  text-align: center;
-  font-weight: 700;
-  text-transform: uppercase;
+const Wrapper = styled.div`
 
   @media screen and (max-width: 760px) {
-    display: none;
+    display: ${props => (props.isOpened ? 'block' : 'none')};
   }
 `;
 
-const Button = styled.button`
-  display: inline-block;
-  position: relative;
-  left: 8px;
-  color: #fff;
-  font-family: "Avenir Next", Arial, sans-serif;
-  font-size: 24px;
-  font-weight: 700;
+const Link = styled(NavLink)`
+  display: block;
+  font-family: "Andale Mono", Courier New, sans-serif;
+  font-weight: normal;
+  color: #3c3c3c;
   text-transform: uppercase;
-  background: none;
-  border: none;
-  outline: none;
-  margin-top: 40px;
-  cursor: pointer;
+  text-decoration: none;
+  margin-top: 25px;
   transition: .2s;
 
   &:hover {
-    opacity: .7;
+    color: #fff;
   }
 
-  &::after {
-    display: inline-block;
-    position: relative;
-    content: '';
-    width: 14px;
-    height: 9px;
-    bottom: 3px;
-    margin-left: 10px;
-    background: url(${require('./arr-down.svg')}) no-repeat 50% 50%;
+  @media screen and (max-width: 760px) {
+    font-size: 20px;
+    padding: 16px 34px;
+    border-bottom: 1px solid rgba(255, 255, 255, .05);
   }
 `;
 
-class Navigation extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isOpened: false,
-    };
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick() {
-    this.setState(prevState => ({
-      isOpened: !prevState.isOpened,
-    }));
-  }
-
-  render() {
-    return (
-      <Menu>
-        <Button onClick={this.handleClick}>{this.props.title}</Button>
-        {this.state.isOpened && this.props.children}
-      </Menu>
-    );
-  }
-}
-
-export default Navigation;
+export default props => (
+  <Wrapper isOpened={props.isOpened}>
+    <Navigation title="Football">
+      <Link to="/products/football/shoes">Shoes</Link>
+      <Link to="/products/football/clothing">Clothing</Link>
+      <Link to="/products/football/accesories">Accesories</Link>
+    </Navigation>
+    <Navigation title="Running">
+      <Link to="/products/running/shoes">Shoes</Link>
+      <Link to="/products/running/clothing">Clothing</Link>
+      <Link to="/products/running/accesories">Accesories</Link>
+    </Navigation>
+    <Navigation title="Basketball">
+      <Link to="/products/basketball/shoes">Shoes</Link>
+      <Link to="/products/basketball/clothing">Clothing</Link>
+      <Link to="/products/basketball/accesories">Accesories</Link>
+    </Navigation>
+  </Wrapper>
+);
