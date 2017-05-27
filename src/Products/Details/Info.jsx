@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import Label from '../../components/Label';
 
@@ -29,21 +29,6 @@ const Colors = styled.div`
   }
 `;
 
-const Button = styled.button`
-  width: 18px;
-  height: 18px;
-  border: none;
-  border-radius: 100%;
-  margin: 0 3px;
-  transition: .2s;
-  cursor: pointer;
-
-  &:hover {
-    position: relative;
-    transform: scale(1.2);
-  }
-`;
-
 const Price = styled.div`
   margin-top: 20px;
   position: relative;
@@ -52,20 +37,28 @@ const Price = styled.div`
 
 const Title = styled.h2`
   font-size: 80px;
-  color: #e2e2e2;
+  color: ${props => props.priceColor};
 `;
 
-export default () => (
-  <Wrapper>
-    <Colors>
-      <Button style={{ background: '#c5c5c5' }} />
-      <Button style={{ background: '#4d87ca' }} />
-      <Button style={{ background: '#4a4a4a' }} />
-      <Button style={{ background: '#e0e0e0' }} />
-    </Colors>
-    <Label className="label">Sale</Label>
-    <Price>
-      <Title>$170</Title>
-    </Price>
-  </Wrapper>
-);
+class Info extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  render() {
+    return (
+      <Wrapper>
+        <Colors>
+          {this.props.children}
+        </Colors>
+        <Label className="label">Sale</Label>
+        <Price>
+          <Title priceColor={this.props.priceColor}>$170</Title>
+        </Price>
+      </Wrapper>
+    );
+  }
+}
+
+export default Info;
