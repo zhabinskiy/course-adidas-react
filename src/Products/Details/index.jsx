@@ -40,8 +40,8 @@ class Details extends Component {
     return (
       <Content>
         <Wrapper>
-          <Title saveButtonColor={colors[this.state.selectedColorIndex]} />
-          <Info priceColor={colors[this.state.selectedColorIndex]}>
+          <Title color={colors[this.state.selectedColorIndex]} />
+          <Info color={colors[this.state.selectedColorIndex]}>
             <Colors colors={colors} onChange={this.handleClick} />
           </Info>
           <Gallery />

@@ -37,7 +37,7 @@ const Price = styled.div`
 
 const Title = styled.h2`
   font-size: 80px;
-  color: ${props => props.priceColor};
+  color: ${props => props.color};
 `;
 
 class Info extends Component {
@@ -54,7 +54,7 @@ class Info extends Component {
         </Colors>
         <Label className="label">Sale</Label>
         <Price>
-          <Title priceColor={this.props.priceColor}>$170</Title>
+          <Title color={this.props.color}>$170</Title>
         </Price>
       </Wrapper>
     );

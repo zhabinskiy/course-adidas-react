@@ -25,7 +25,7 @@ const Heading = styled.h1`
 `;
 
 const Button = styled.button`
-  background: ${props => props.saveButtonColor};
+  background: ${props => props.color};
   outline: none;
   border: none;
   border-radius: 100%;
@@ -58,7 +58,7 @@ class Title extends Component {
     return (
       <Wrapper>
         <Heading>Ultra Boost</Heading>
-        <Button saveButtonColor={this.props.saveButtonColor}>Save</Button>
+        <Button color={this.props.color}>Save</Button>
       </Wrapper>
     );
   }
