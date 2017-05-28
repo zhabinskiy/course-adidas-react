@@ -6,7 +6,7 @@ import Navigation from './Navigation';
 const Wrapper = styled.div`
 
   @media screen and (max-width: 760px) {
-    display: ${props => (props.isOpened ? 'block' : 'none')};
+    display: ${props => (props.isOpen ? 'block' : 'none')};
   }
 `;
 
@@ -36,7 +36,7 @@ const Link = ({ to, children }) => (
 );
 
 export default props => (
-  <Wrapper isOpened={props.isOpened}>
+  <Wrapper isOpen={props.isOpen}>
     <Navigation title="Football">
       <Link to="/products/football/shoes">Shoes</Link>
       <Link to="/products/football/clothing">Clothing</Link>

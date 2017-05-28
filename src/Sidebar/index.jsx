@@ -16,7 +16,7 @@ const Sidebar = styled.aside`
   justify-content: flex-start;
   flex-direction: column;
   align-items: center;
-  z-index: 2;
+  z-index: 3;
 
   @media screen and (max-width: 760px) {
     width: 100%;
@@ -42,14 +42,14 @@ class Aside extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isOpened: false,
+      isOpen: false,
     };
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
     this.setState(prevState => ({
-      isOpened: !prevState.isOpened,
+      isOpen: !prevState.isOpen,
     }));
   }
 
@@ -58,7 +58,7 @@ class Aside extends Component {
       <Sidebar>
         <Wrapper>
           <Logo />
-          <Burger onClick={this.handleClick} isOpened={this.state.isOpened} />
+          <Burger onClick={this.handleClick} isOpen={this.state.isOpen} />
         </Wrapper>
         <Search />
         <Menu />

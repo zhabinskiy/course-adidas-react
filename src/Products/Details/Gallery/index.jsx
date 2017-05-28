@@ -1,5 +1,34 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
+import Photos from './Photos';
+
+const images = [
+  {
+    id: 1,
+    src: require('./shoes-1@3x.png'),
+    alt: 'Utra Boost 1',
+  },
+  {
+    id: 2,
+    src: require('./shoes-2@3x.png'),
+    alt: 'Utra Boost 2',
+  },
+  {
+    id: 3,
+    src: require('./shoes-3@3x.png'),
+    alt: 'Utra Boost 3',
+  },
+  {
+    id: 4,
+    src: require('./shoes-1@3x.png'),
+    alt: 'Utra Boost 4',
+  },
+  {
+    id: 5,
+    src: require('./shoes-2@3x.png'),
+    alt: 'Utra Boost 5',
+  },
+];
 
 const Wrapper = styled.div``;
 
@@ -7,88 +36,51 @@ const Main = styled.div`
   position: relative;
   bottom: 170px;
   z-index: 0;
-`;
 
-const MainPhoto = styled.img`
-  width: 85%;
-`;
-
-const Gallery = styled.div`
-  position: relative;
-  bottom: 190px;
-  width: 100%;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-`;
-
-const Photos = styled.div`
-  display: inline-block;
-`;
-
-const Lines = styled.div`
-  display: inline-block;
-  width: 15%;
-  margin-left: 30px;
-  margin-right: 30px;
-`;
-
-const Line = styled.div`
-  width: 100%;
-  height: 3px;
-  background-color: #e7e7e7;
-  border-radius: 1.5px;
-  margin: 3px 0;
-`;
-
-const More = styled.button`
-  background: none;
-  border: none;
-  outline: none;
-  text-align: left;
-  position: relative;
-  bottom: 5px;
-  width: 50px;
-  font-size: 14px;
-  font-family: "Avenir Next", Arial, sans-serif;
-  font-weight: 500;
-  color: #c0c0c0;
-  transition: .2s;
-  cursor: pointer;
-
-  &:hover {
-    color: #6e6e6e;
+  @media screen and (max-width: 760px) {
+    bottom: 0px;
+    top: 100px;
+    margin-bottom: 280px;
   }
 `;
 
-export default () => (
-  <Wrapper>
+const Photo = styled.img`
+  width: 85%;
+`;
 
-    <Main>
-      <MainPhoto src={require('./big-shoes@2x.jpg')} alt="" />
-    </Main>
+class Gallery extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedImageIndex: 3,
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
 
-    <Gallery>
+  handleClick(selectedImageIndex) {
+    this.setState({ selectedImageIndex });
+  }
 
-      <Photos>
-        <img src={require('./small-shoes-1@2x.jpg')} width="145" height="118" alt="" />
+  render() {
+    return (
+      <Wrapper>
 
-        <img src={require('./small-shoes-2@2x.jpg')} width="145" height="118" alt="" />
+        <Main>
+          <Photo
+            src={images[this.state.selectedImageIndex].src}
+            alt={images[this.state.selectedImageIndex].alt}
+          />
+        </Main>
 
-        <img src={require('./small-shoes-3@2x.jpg')} width="145" height="118" alt="" />
+        <Photos
+          images={images}
+          onClick={this.handleClick}
+          selectedImageIndex={this.state.selectedImageIndex}
+        />
 
-        <img src={require('./small-shoes-4@2x.jpg')} width="145" height="118" alt="" />
-      </Photos>
+      </Wrapper>
+    );
+  }
+}
 
-      <Lines>
-        <Line />
-        <Line />
-        <Line />
-      </Lines>
-
-      <More>see more photos</More>
-
-    </Gallery>
-
-  </Wrapper>
-);
+export default Gallery;

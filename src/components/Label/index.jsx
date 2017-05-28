@@ -12,6 +12,7 @@ const Label = styled.span`
   padding: 6px 0;
   text-align: center;
   background: #ff5c5c;
+  z-index: 2;
 `;
 
 export default props => <Label>{props.children}</Label>;
