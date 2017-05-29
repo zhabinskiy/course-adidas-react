@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const Title = styled.h1`
+const Heading = styled.h1`
   color: #3a3a3a;
   font-size: 64px;
   text-transform: uppercase;
@@ -26,7 +26,7 @@ const Title = styled.h1`
 `;
 
 const Button = styled.button`
-  background: #e3e3e3;
+  background: ${props => props.color};
   outline: none;
   border: none;
   border-radius: 100%;
@@ -41,7 +41,7 @@ const Button = styled.button`
 
   &:hover {
     transform: scale(1.1);
-    background: #d0caca;
+    opacity: .8;
   }
 
   @media screen and (max-width: 760px) {
@@ -49,9 +49,20 @@ const Button = styled.button`
   }
 `;
 
-export default () => (
-  <Wrapper>
-    <Title>Ultra Boost</Title>
-    <Button>Save</Button>
-  </Wrapper>
-);
+class Title extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  render() {
+    return (
+      <Wrapper>
+        <Heading>Ultra Boost</Heading>
+        <Button color={this.props.color}>Save</Button>
+      </Wrapper>
+    );
+  }
+}
+
+export default Title;
