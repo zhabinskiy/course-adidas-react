@@ -33,6 +33,7 @@
     "deploy": "npm run build && now build -p -t $NOW_TOKEN && now alias -t $NOW_TOKEN"
   },
   "now": {
+    "name": "build",
     "alias": "kzhabinskiy-adidas-shop"
   }
 }
