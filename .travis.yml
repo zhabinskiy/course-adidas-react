@@ -5,3 +5,9 @@ install:
   - npm install
 script:
   - npm run lint
+deploy:
+  on: master
+  provider: script
+  skip_cleanup: true
+  script:
+    — npm run deploy
